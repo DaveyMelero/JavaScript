@@ -9,9 +9,11 @@ var userChoseNumbers = confirm("would you like numbers in your password?");
 var userChoseSpecialCharacters = confirm("would you like special characters in your password?");
 var lowerCase = confirm("would you like lower case in your password?");
 var upperCase = confirm("would you like upper case in your password?");
+
 var options = {
   userChoseNumbers: userChoseNumbers
-
+  
+  
 }
 
 return options;
@@ -27,10 +29,10 @@ function generatePassword() {
   var availablechars = [];
  var passwordArr = [];
   if(userchose.userChoseNumbers){
-   availablechars = availablechars.concat(numbers).concat(SpecialCharacters).concat(lowerCase).concat(upperCase);
+    availablechars = availablechars.concat(numbers).concat(SpecialCharacters).concat(lowerCase).concat(upperCase);
   }
 
-  for(var i = 8; i < 128; i++){
+  for(var i = 0; i < 128; i++){
   passwordArr.push(availablechars[createRandom(availablechars.length)])
   }
 
